@@ -1,0 +1,18 @@
+// Index.html
+<!doctype html>
+<html>
+<head>
+  <!-- ... -->
+</head>
+<body>
+  <app>Loading...</app>
+
+  <!-- ... -->
+  <script>
+    System.import('system-config.js')
+      .then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+  </script>
+</body>
+</html>

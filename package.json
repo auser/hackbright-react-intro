@@ -1,0 +1,75 @@
+{
+  "name": "BuzzJS",
+  "version": "1.0.1",
+  "description": "BuzzJS",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "NODE_ENV=production webpack --config webpack.config.production.js",
+    "lint": "eslint --ext .js,.jsx .",
+    "deploy": "npm run clean & npm run build && surge -p .",
+    "templates:html": "./node_modules/.bin/render presentation/templates/html.swig --context package.json > index.html",
+    "templates:js": "./node_modules/.bin/render presentation/templates/js.swig.js --engine swig --context package.json > presentation/template.js",
+    "templates": "concurrently 'npm run templates:html' 'npm run templates:js'",
+    "templates:watch": "nodemon --watch './presentation/templates' --exec 'npm run templates'",
+    "pandoc": "cat presentation/deck/index.md| pandoc -f markdown -t revealjs -t presentation/lib/spectacle.lua --mathjax --template presentation/template.js -o presentation/index.js",
+    "pandoc:watch": "nodemon --watch './presentation' -e md --exec 'npm run pandoc'",
+    "display": "concurrently 'static -p 3000 --host-address localhost dist/' 'ngrok http 3000 -subdomain auser'",
+    "start": "NODE_ENV=development concurrently 'node server.js' 'npm run pandoc:watch' 'npm run templates:watch'"
+  },
+  "metadata": {
+    "title": "BuzzJS",
+    "fonts": [
+      "https://fonts.googleapis.com/css?family=Lobster+Two:400,700",
+      "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
+    ],
+    "styles": [
+      "assets/styles.css"
+    ],
+    "scripts": []
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "4.1.1",
+    "prismjs": "^1.5.0",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "spectacle": "^1.0.6",
+    "spectacle-code-slide": "^0.1.10"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "concurrently": "^2.1.0",
+    "css-loader": "^0.23.1",
+    "dotenv": "^2.0.0",
+    "eslint": "^2.11.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-filenames": "^1.0.0",
+    "eslint-plugin-react": "^5.1.1",
+    "express": "^4.13.4",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "is-buffer": "^1.1.3",
+    "markdown-loader": "^0.1.7",
+    "node-libs-browser": "^1.0.0",
+    "nodemon": "^1.9.2",
+    "raw-loader": "^0.5.1",
+    "render-cli": "^0.3.1",
+    "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "surge": "latest",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  }
+}

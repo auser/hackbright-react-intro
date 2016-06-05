@@ -1,0 +1,20 @@
+// Index.html
+<!doctype html>
+<html>
+<head>
+  <!-- ... -->
+<link rel="stylesheet" href="vendor/semantic-ui-css/semantic.css"
+    charset="utf-8" />
+</head>
+<body>
+  <app>Loading...</app>
+
+  <!-- ... -->
+  <script>
+    System.import('system-config.js')
+      .then(function () {
+        System.import('main');
+      }).catch(console.error.bind(console));
+  </script>
+</body>
+</html>
