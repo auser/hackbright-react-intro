@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no" />
-  <title>{{ name }}</title>
+  <title>{{ metadata.title }}</title>
 
   <!-- fonts -->
   {% for font in metadata.fonts %}<link href="{{ font }}" rel="stylesheet" type="text/css">

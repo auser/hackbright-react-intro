@@ -11,14 +11,14 @@
     "templates:html": "./node_modules/.bin/render presentation/templates/html.swig --context package.json > index.html",
     "templates:js": "./node_modules/.bin/render presentation/templates/js.swig.js --engine swig --context package.json > presentation/template.js",
     "templates": "concurrently 'npm run templates:html' 'npm run templates:js'",
-    "templates:watch": "nodemon --watch './presentation/templates' --exec 'npm run templates'",
-    "pandoc": "cat presentation/deck/index.md| pandoc -f markdown -t revealjs -t presentation/lib/spectacle.lua --mathjax --template presentation/template.js -o presentation/index.js",
-    "pandoc:watch": "nodemon --watch './presentation' -e md --exec 'npm run pandoc'",
+    "templates:watch": "nodemon --watch './templates' --exec 'npm run templates'",
+    "pandoc": "cat deck/index.md| pandoc -f markdown -t revealjs -t presentation/lib/spectacle.lua --mathjax --template presentation/template.js -o presentation/index.js",
+    "pandoc:watch": "nodemon --watch './deck' -e md --exec 'npm run pandoc'",
     "display": "concurrently 'static -p 3000 --host-address localhost dist/' 'ngrok http 3000 -subdomain auser'",
     "start": "NODE_ENV=development concurrently 'node server.js' 'npm run pandoc:watch' 'npm run templates:watch'"
   },
   "metadata": {
-    "title": "BuzzJS",
+    "title": "Introduction to React",
     "fonts": [
       "https://fonts.googleapis.com/css?family=Lobster+Two:400,700",
       "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700"
@@ -36,7 +36,7 @@
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "spectacle": "^1.0.6",
-    "spectacle-code-slide": "^0.1.10"
+    "spectacle-code-slide": "^0.1.8"
   },
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",

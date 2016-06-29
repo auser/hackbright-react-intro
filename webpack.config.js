@@ -60,7 +60,8 @@ module.exports = {
     }, {
       test: /\.css$/,
       loaders: ["style", "raw"],
-      include: __dirname
+      exclude: /code/
+      // include: __dirname
     }, {
       test: /\.svg$/,
       loader: "url?limit=10000&mimetype=image/svg+xml",

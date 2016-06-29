@@ -30,27 +30,10 @@ require('prismjs/components/prism-bash.js');
 require('prismjs/components/prism-css.js');
 require('prismjs/components/prism-markup.js');
 require('prismjs/components/prism-javascript.js');
-require('prismjs/components/prism-typescript.js');
 
 
 const images = {
-  install_angular_cli: require('../assets/install_angular_cli.png'),
-  angularhelp: require('../assets/angular-help.png'),
-  ngnewdemo: require('../assets/ng-new-demo.png'),
-  ngtree: require('../assets/ng-tree.png'),
-  ngserve1: require('../assets/ng-serve-1.png'),
-  rmclean: require('../assets/rm_clean.png'),
-  nggeneratecomponent: require('../assets/nggeneratecomponent.png'),
-  demo_no_directive: require('../assets/demo_no_directive.png'),
-  demo_directive: require('../assets/demo_directive.png'),
-  ngfor: require('../assets/ngfor.png'),
-  npm_semantic_ui: require('../assets/npm_semantic_ui.png'),
-  semantic_ui_css: require('../assets/semantic_ui_css.png'),
-  semantic_styling: require('../assets/semantic_styling.png'),
-  npm_install_http: require('../assets/npm_install_http.png'),
   ari: require('../assets/ari.png'),
-  ng_book_2: require('../assets/ng_book_2.png'),
-  fullstackreact: require('../assets/fullstackreact.png'),
 };
 
 preloader(images);
@@ -88,51 +71,28 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
       <Deck transition={[]} textSize={20} transitionDuration={500} progress='none'>
 
+          <Slide  id="hello" textColor="light"><Heading size={1} id="hello" textColor="light">Hello</Heading>
+          
+          </Slide>
+          <Slide  id="follow-along"><Heading size={1} id="follow-along">Follow along!</Heading>
+          
+          <Link href="http://hackbright.surge.sh/">http://hackbright.surge.sh/</Link>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="this-is-a-technical-talk-so-break-out-your-computers">This <em>is</em> a technical talk, so break out your computers</Heading>
+          
+          </Slide>
           <Slide  id="section">
           
-          <Heading size={2} id="hello">Hello</Heading>
-          
-          </Slide>
-          <Slide  id="section-1">
-          
-          <Heading size={2} id="follow-along">Follow along!</Heading>
-          
-          <Link href="http://buzzjs.surge.sh/">http://buzzjs.surge.sh/</Link>
-          
-          </Slide>
-          <Slide  bgColor="primary" transition={["fade"]} id="section-2">
-          
-          <Heading size={2} id="this-is-a-technical-talk-so-break-out-your-computers" textColor="light">This <em>is</em> a technical talk, so break out your computers</Heading>
-          
-          </Slide>
-          <Slide  id="section-3">
-          
-          <CodePane lang="bash" textSize={22}>npm install -g angular-cli</CodePane>
-          
-          </Slide>
-          <Slide  id="section-4">
-          
-          <Heading size={2} id="a-light-introduction-to-angular-2">A <em>light</em> introduction to Angular 2</Heading>
-          
-          </Slide>
-          <Slide  bgColor="primary" id="section-5">
-          
-          <Heading size={2} id="before-i-forget..." textColor="light">Before I forget...</Heading>
-          
-          <Heading size={2} id="im-ari" fit={true}>I'm Ari</Heading>
-          
-          <Image src={images.ari}  title="fig:" />
+          <Image src={images.ari}  title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-6">
+          <Slide>
           
-          <Heading size={2} id="should-i-answer-the-why-angular-2-over-react">Should I answer the <em>why</em> Angular 2 over React?</Heading>
-          
-          </Slide>
-          <Slide  bgColor="dark" id="section-7" textColor="light">
-          
-          <Heading size={2} id="us" textColor="light">Us</Heading>
+          <Heading size={2} id="some-of-our-books">Some of our books</Heading>
           
           <List>
           <ListItem><Link href="http://ng-newsletter.com">ng-newsletter</Link></ListItem>
@@ -142,711 +102,1133 @@ export default class Presentation extends React.Component {
           </List>
           
           </Slide>
-          <Slide  id="section-8">
+          <Slide>
           
-          <Image src={images.ng_book_2}  title="fig:" width="100%" />
+          <Link href="http://ng-book.com/2"><Image src="http://d.pr/i/1dDOF.png" title="" width="100%" />
+          </Link>
+          
+          </Slide>
+          <Slide>
+          
+          <Link href="https://fullstackreact.com"><Image src="http://d.pr/i/ILhR.png" title="" width="100%" />
+          </Link>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="tools">Tools</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="text-editor">Text Editor</Heading>
+          
+          <Link href="http://www.sublimetext.com/">Sublime Text 2/3</Link> <Link href="https://macromates.com">Textmate</Link> <Link href="http://www.vim.org">Vim</Link> <Link href="https://www.gnu.org/software/emacs/">Emacs</Link> <Link href="https://atom.io">Atom</Link>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="web-browser">Web browser</Heading>
+          
+          <Link href="http://google.com/chrome">Google Chrome</Link>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="web-browser-1">Web browser</Heading>
+          
+          <Link href="http://google.com/chrome">Google Chrome</Link> <em>Really? You're going to use anything else?</em>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="rapid-es6-introduction">Rapid ES6 introduction</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="es6-classes">ES6 classes</Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/es6-classes.js')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="es6-functions">ES6 functions</Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_0.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="this"><Code>this</Code></Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_1.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1exQD.png" title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-9">
+          <Slide>
           
-          <Image src={images.fullstackreact}  title="fig:" width="100%" />
+          <Heading size={2} id="this-1"><Code>this</Code></Heading>
+          
+          The <em>context</em> is not set right. We need to <em>bind</em> the function to the context.
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_2.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1dRLV.png" title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-10">
+          <Slide>
           
-          <Image src={images.install_angular_cli}  title="fig:" width="100%" />
+          <Heading size={2} id="string-interpolation">String interpolation</Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_3.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/11IGr.png" title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-11">
+          <Slide>
           
-          <CodePane lang="bash" textSize={22}>ng new demo &amp;&amp; cd demo</CodePane>
+          <Heading size={2} id="variable-expansion">Variable expansion</Heading>
           
-          </Slide>
-          <Slide  id="section-12">
-          
-          <Image src={images.ngnewdemo}  title="fig:" width="100%" />
-          
+          <CodePane lang="javascript" source={require('raw!../code/code_4.javascript')} />
           
           </Slide>
-          <Slide  id="section-13">
+          <Slide>
           
-          <Image src={images.ngtree}  title="fig:" width="100%" />
+          <Heading size={2} id="objects">Objects</Heading>
           
-          
-          </Slide>
-          <Slide  id="section-14">
-          
-          <CodePane lang="bash" textSize={22}>ng serve</CodePane>
+          <CodePane lang="javascript" source={require('raw!../code/code_5.javascript')} />
           
           </Slide>
-          <Slide  id="section-15">
+          <Slide>
           
-          <Image src={images.ngserve1}  title="fig:" width="100%" />
-          
-          
-          </Slide>
-          <Slide  bgColor="dark" id="section-16">
-          
-          <Heading size={2} id="how-does-this-work" textColor="light">How does this work?</Heading>
+          <Heading size={2} id="document-object-model-dom">Document Object Model (DOM)</Heading>
           
           </Slide>
+          <Slide>
           
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/first_component.ts')}
-                ranges={[
-                       { loc: [0, 18]},
-                       { loc: [7, 8], title: 'Selector'},
-                       { loc: [19, 28]},
-                       { loc: [27, 28], title: 'Bootstrap'},
-                       { loc: [29, 32]},
-                       { loc: [33, 45]},
-                       { loc: [47, 50]},
-                     ]} />
-          
-          <Slide  bgColor="dark" id="section-18">
-          
-          <Heading size={2} id="pretty-simple-eh" textColor="light">Pretty simple, eh?</Heading>
+          <CodePane lang="markup" source={require('raw!../code/basic_page.html')} />
           
           </Slide>
-          <Slide  id="section-19">
+          <Slide>
           
-          <Heading size={2} id="components-are-the-heart-of-angular-2">Components are the heart of Angular 2</Heading>
+          <Heading size={2} id="playing-with-the-dom">Playing with the DOM</Heading>
           
-          </Slide>
-          <Slide  id="section-20">
-          
-          Conceptually, components allow us to take our app and break it up into smaller parts where we can focus on individual functionality of a particular portion of our page.
+          <CodePane lang="markup" source={require('raw!../code/code_6.markup')} />
           
           </Slide>
-          <Slide  id="section-21">
+          <Slide>
           
-          <Heading size={2} id="now-lets-build-our-own-component">Now let's build our own Component</Heading>
-          
-          </Slide>
-          <Slide  id="section-22">
-          
-          <CodePane lang="bash" textSize={22}>$ mkdir -p src/app/counter</CodePane>
-          
-          <CodePane lang="bash" textSize={22}>$ touch src/app/counter/counter.component.ts</CodePane>
-          
-          </Slide>
-          <Slide  id="section-23">
-          
-          <Image src={images.rmclean}  title="fig:" width="100%" />
+          <Image src="http://d.pr/i/10TDy.png" title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-24">
+          <Slide>
           
-          <Heading size={2} id="imports">Imports</Heading>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/custom-component.ts')}
-                ranges={[
-                       { loc: [0, 1]},
-                     ]} />
-          
-          <Slide  id="section-26">
-          
-          <Heading size={2} id="component-decorator"><Code>@Component</Code> decorator</Heading>
+          <Heading size={2} id="a-light-introduction-to-building-apps-with-react">A <em>light</em> introduction to Building Apps with React</Heading>
           
           </Slide>
-          <Slide  id="section-27">
+          <Slide>
           
-          <Heading size={2} id="decorator">Decorator?</Heading>
-          
-          </Slide>
-          <Slide  id="section-28">
-          
-          <Heading size={4} id="the-decorator-pattern">The decorator pattern</Heading>
-          
-          <CodePane source={require('raw!../code/decorator.js')} textSize={24} padding="10px auto" lang="javascript"></CodePane>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/custom-component.ts')}
-                ranges={[
-                       { loc: [2, 8], title: 'Component decorator'},
-                       { loc: [8, 12] },
-                       { loc: [3, 4] },
-                     ]} />
-          
-          <Slide  id="section-30">
-          
-          <CodePane source={require('html!../code/selector.html')} lang="markup" textSize={24}></CodePane>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/custom-component.ts')}
-                ranges={[
-                       { loc: [4, 7] },
-                     ]} />
-          
-          <Slide  id="section-32">
-          
-          <CodePane source={require('raw!../code/template.js')} lang="javascript" textSize={24}></CodePane>
-          
-          </Slide>
-          <Slide  id="section-33">
-          
-          <Heading size={2} id="lets-show-this-bad-boy">Let's show this bad boy</Heading>
-          
-          </Slide>
-          <Slide  id="section-34">
-          
-          <CodePane source={require('html!../code/demo-component.html')} lang="markup" textSize={24}></CodePane>
-          
-          </Slide>
-          <Slide  id="section-35">
-          
-          <Image src={images.demo_no_directive}  title="fig:" width="100%" />
-          
-          
-          </Slide>
-          <Slide  id="section-36">
-          
-          <Heading size={2} id="huh">Huh?</Heading>
-          
-          </Slide>
-          <Slide  id="section-37">
-          
-          <Heading size={2} id="we-need-to-handle-injection">We need to handle <em>injection</em></Heading>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/demo-component-with-custom.ts')}
-                ranges={[
-                       { loc: [2, 3] },
-                       { loc: [7, 8] },
-                     ]} />
-          
-          <Slide  id="section-39">
-          
-          <Image src={images.demo_directive}  title="fig:" width="100%" />
-          
-          
-          </Slide>
-          <Slide  id="section-40">
-          
-          Not very interesting... let's add an input
-          
-          </Slide>
-          <Slide  id="section-41">
-          
-          <CodePane source={require('html!../code/input-goal.html')} lang="markup" textSize={22}></CodePane>
-          
-          </Slide>
-          <Slide  id="section-42">
-          
-          <Heading size={2} id="inputs">inputs</Heading>
-          
-          </Slide>
-          <Slide  id="section-43">
-          
-          We need to tell the component what to expect as an input.
-          
-          </Slide>
-          <Slide  id="section-44">
-          
-          <CodePane source={require('../code/component-inputs.ts')} lang="typescript" textSize={22}></CodePane>
-          
-          </Slide>
-          <Slide  id="section-45">
-          
-          <Heading size={4} id="square-brackets-pass-inputs"><Code>[square brackets]</Code> pass inputs</Heading>
-          
-          </Slide>
-          <Slide  id="section-46">
-          
-          <CodePane source={require('html!../code/input-brackets.html')} lang="markup" textSize={22}></CodePane>
-          
-          </Slide>
-          <Slide  id="section-47">
-          
-          <Heading size={2} id="lets-pass-an-input">Let's pass an input</Heading>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/demo-with-count.ts')}
-                ranges={[
-                       { loc: [13, 14] },
-                       { loc: [16, 17] },
-                       { loc: [21, 25] },
-                     ]} />
-          
-          <Slide  id="section-49">
-          
-          Our counter component has access to the counter. Let's use this variable.
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/counter-with-initialCount.ts')}
-                ranges={[
-                       { loc: [5, 6] },
-                       { loc: [7, 9] },
-                     ]} />
-          
-          <Slide  bgColor="dark" transition={['fade']} id="section-51" textColor="light">
-          
-          <Heading size={2} id="initialcount-is-descriptive-for-the-parent" textColor="light"><em>initialCount</em> is descriptive for the parent</Heading>
-          
-          </Slide>
-          <Slide  bgColor="dark" id="section-52" textColor="light">
-          
-          <Heading size={2} id="count-is-more-descriptive-for-the-child" textColor="light"><em>count</em> is more descriptive for the child</Heading>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/counter-with-count.ts')}
-                ranges={[
-                       { loc: [5, 6] },
-                       { loc: [7, 9] },
-                       { loc: [11, 12] }
-                     ]} />
-          
-          <Slide  bgColor="yellow" id="section-54">
-          
-          <Heading size={2} id="what-good-is-a-counter-that-doesnt-count">What good is a counter that doesn't count?</Heading>
-          
-          </Slide>
-          <Slide  id="section-55">
-          
-          <Heading size={2} id="lets-add-interaction-to-count-clicks">Let's add interaction to count clicks</Heading>
-          
-          </Slide>
-          <Slide  id="section-56" textColor="red">
-          
-          <Heading size={2} id="handles-outputs"><Code textSize={59}>()</Code> handles outputs</Heading>
-          
-          </Slide>
-          <Slide  id="section-57">
-          
-          <Code>(somethingHappens)='actionToTake()'</Code>
-          
-          </Slide>
-          <Slide  id="section-58">
-          
-          <Code>(event)='class['method']'</Code>
-          
-          </Slide>
-          <Slide  id="section-59">
-          
-          <Heading size={2} id="lets-create-an-output">Let's create an output</Heading>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/counter-with-output.ts')}
-                ranges={[
-                       { loc: [6, 9] },
-                       { loc: [15, 18] },
-                     ]} />
-          
-          <Slide  id="section-61">
-          
-          Adding <Code>addCount()</Code> on our function
-          
-          </Slide>
-          <Slide  id="section-62">
-          
-          Kinda boring, eh?
-          
-          </Slide>
-          <Slide  id="section-63">
-          
-          Multiple counters are more exciting
-          
-          </Slide>
-          <Slide  id="section-64">
-          
-          Let's create multiple counters
-          
-          </Slide>
-          <Slide  id="section-65">
-          
-          Let's create our counts to iterate through in the parent
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="typescript"
-            transition={[]}
-            textSize={22}
-            code={require('../code/demo-with-counters.ts')}
-                ranges={[
-                       { loc: [13, 14] },
-                       { loc: [15, 18] },
-                       { loc: [21, 25] },
-                     ]} />
-          
-          <Slide  id="section-67">
-          
-          <CodePane lang="javascript" textSize={22}>*ngFor='let count in counters'</CodePane>
-          
-          </Slide>
-          <Slide  id="section-68">
-          
-          <Image src={images.ngfor}  title="fig:" width="100%" />
-          
-          
-          </Slide>
-          <Slide  id="section-69">
-          
-          Ugly (and only kind of exciting)
-          
-          </Slide>
-          <Slide  id="section-70">
-          
-          <Heading size={2} id="styling">Styling</Heading>
-          
-          </Slide>
-          <Slide  id="section-71">
-          
-          <Heading size={2} id="multiple-ways-to-style-in-ng2">Multiple ways to style in ng2</Heading>
-          
-          </Slide>
-          <Slide  id="section-72">
+          <Heading size={2} id="react-is...">React is...</Heading>
           
           <List>
-          <ListItem>global stylesheets</ListItem>
-          <ListItem>components</ListItem>
-          <ListItem>inline</ListItem>
+          <ListItem>A front-end UI framework for building interfaces</ListItem>
+          <ListItem>The <strong>v</strong> in MVC</ListItem>
+          <ListItem>Declarative</ListItem>
+          <ListItem>Composable</ListItem>
+          <ListItem>Much much more...</ListItem>
           </List>
           
           </Slide>
-          <Slide  id="section-73">
+          <Slide>
           
-          <Heading size={3} id="global-stylesheets">Global stylesheets</Heading>
-          
-          </Slide>
-          <Slide  id="section-74">
-          
-          <CodePane lang="bash" textSize={22}>npm install --save semantic-ui-css</CodePane>
-          
-          </Slide>
-          <Slide  id="section-75">
-          
-          <Image src={images.npm_semantic_ui}  title="fig:" width="100%" />
+          <Image src="http://d.pr/i/pKfV.png" title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-76">
+          <Slide>
           
-          ng2 needs to know <em>how</em> to include an <Code>npm</Code> module
-          
-          </Slide>
-          <Slide  id="section-77">
-          
-          Kinda needy, but easier optimization
+          <Heading size={2} id="lets-get-started">Let's get started</Heading>
           
           </Slide>
-          <Slide  id="section-78">
+          <Slide>
           
-          <Code>angular-cli</Code> adds <Code>angular-cli-build.js</Code>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-            lang="javascript"
-            transition={[]}
-            textSize={22}
-            code={require('raw!../code/angular-cli-build.js')}
-                ranges={[
-                       { loc: [16, 18] },
-                     ]} />
-          
-          <Slide  id="section-80">
-          
-          <CodePane lang="markup" textSize={20}>&lt;link href='vendor/semantic-ui-css/semantic.css' /&gt;</CodePane>
+          <CodePane lang="shell" source={require('raw!../code/code_7.shell')} />
           
           </Slide>
+          <Slide>
           
+          <CodePane lang="html" source={require('raw!../code/code_8.html')} />
           
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('html!../code/semantic-ui.html')}
-               ranges={[
-                      { loc: [5, 7] },
-                    ]} />
+          </Slide>
+          <Slide>
           
-          <Slide  id="section-82">
-          
-          <Image src={images.semantic_ui_css}  title="fig:" width="100%" />
+          <Image src="http://d.pr/i/1grft.png" title="fig:" width="100%" />
           
           
           </Slide>
-          <Slide  id="section-83">
+          <Slide>
           
-          Let's add some pretty-ness
-          
-          </Slide>
-          <Slide  id="section-84">
-          
-          <Heading size={3} id="component-styling">Component styling</Heading>
+          <Heading size={2} id="this-isnt-realistic-ari...-come-on">This isn't realistic, Ari... come on!</Heading>
           
           </Slide>
-          <Slide  id="section-85">
+          <Slide>
           
-          In the <Code>@Component()</Code> decorator
+          <Heading size={2} id="job-material">Job material</Heading>
           
-          </Slide>
-          
-          
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/component_style.ts')}
-               ranges={[
-                      { loc: [1, 19] },
-                      { loc: [7, 10] },
-                      { loc: [21, 29] },
-                    ]} />
-          
-          <Slide  id="section-87">
-          
-          <Image src={images.semantic_styling}  title="fig:" width="100%" />
-          
+          <List>
+          <ListItem>build tools</ListItem>
+          <ListItem>webpack</ListItem>
+          <ListItem>babel/es6</ListItem>
+          <ListItem>css modules</ListItem>
+          <ListItem>postcss</ListItem>
+          <ListItem>and more!</ListItem>
+          </List>
           
           </Slide>
-          <Slide  id="section-88">
+          <Slide>
           
-          <Heading size={3} id="still-ugly">Still ugly</Heading>
+          <Heading size={2} id="table-of-contents">Table of contents</Heading>
           
-          </Slide>
-          <Slide  id="section-89">
-          
-          <Heading size={2} id="inline-styles">Inline styles?</Heading>
-          
-          </Slide>
-          <Slide  id="section-90">
-          
-          Of course we can
-          
-          </Slide>
-          <Slide  id="section-91">
-          
-          <CodePane lang="markup" textSize={22}>[ngStyle]='styleObject'</CodePane>
+          <List>
+          <ListItem>build tools</ListItem>
+          <ListItem>webpack</ListItem>
+          <ListItem>babel/es6</ListItem>
+          <ListItem>basic React</ListItem>
+          <ListItem>componentizing</ListItem>
+          <ListItem>fetching from Twitter</ListItem>
+          <ListItem>css modules</ListItem>
+          <ListItem>postcss</ListItem>
+          <ListItem>and more!</ListItem>
+          </List>
           
           </Slide>
+          <Slide>
           
+          <Heading size={2} id="table-of-contents-hopefully">Table of contents (hopefully)</Heading>
           
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/inline_styling.ts')}
-               ranges={[
-                      { loc: [7, 9] },
-                      { loc: [29, 30] },
-                      { loc: [50, 51] },
-                      { loc: [71, 72] },
-                      { loc: [84, 87] },
-                    ]} />
-          
-          <Slide  id="section-93">
-          
-          It's not realistic that we'll store our data in the component.
+          <List>
+          <ListItem>build tools</ListItem>
+          <ListItem>webpack</ListItem>
+          <ListItem>babel/es6</ListItem>
+          <ListItem>basic React</ListItem>
+          <ListItem>componentizing</ListItem>
+          <ListItem>fetching from Twitter</ListItem>
+          <ListItem>css modules</ListItem>
+          <ListItem>postcss</ListItem>
+          <ListItem>and more!</ListItem>
+          </List>
           
           </Slide>
-          <Slide  id="section-94">
+          <Slide>
           
-          <Heading size={2} id="services">Services</Heading>
-          
-          </Slide>
-          <Slide  id="section-95">
-          
-          <Heading size={2} id="lets-store-our-counts-in-a-service-instead">Let's store our counts in a service instead!</Heading>
+          <Heading size={2} id="tools-1">Tools</Heading>
           
           </Slide>
-          <Slide  id="section-96">
+          <Slide>
           
-          <CodePane lang="bash" textSize={22}>ng generate service count</CodePane>
+          Make sure you have <Code>npm</Code> installed
           
-          </Slide>
-          
-          
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/count_service_1.ts')}
-               ranges={[
-                      { loc: [0, 8] },
-                      { loc: [1, 2] },
-                      { loc: [4, 6] },
-                    ]} />
-          
-          <Slide  id="section-98">
-          
-          <Heading size={2} id="now-well-need-to-inject-our-service-into-our-component...">Now we'll need to <em>inject</em> our service into our component...</Heading>
+          <CodePane lang="shell" source={require('raw!../code/code_9.shell')} />
           
           </Slide>
-          <Slide  id="section-99">
+          <Slide>
           
-          We need to mark it as injectable first
+          <CodePane lang="shell" source={require('raw!../code/code_10.shell')} />
+          
+          <Image src="http://d.pr/i/Fd9S.png" title="fig:" width="100%" />
+          
           
           </Slide>
+          <Slide>
           
-          
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/count_service_1.ts')}
-               ranges={[
-                      { loc: [19, 22] },
-                    ]} />
-          
-          <Slide  id="section-101">
-          
-          <Heading size={2} id="now-well-need-to-inject-our-service-into-our-component...-1">Now we'll need to <em>inject</em> our service into our component...</Heading>
+          <Heading size={2} id="generating-our-project">Generating our project</Heading>
           
           </Slide>
+          <Slide>
           
+          <CodePane lang="shell" source={require('raw!../code/code_11.shell')} />
           
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/count_service_1.ts')}
-               ranges={[
-                      { loc: [42, 43] },
-                      { loc: [51, 52] },
-                      { loc: [58, 59] },
-                    ]} />
+          <Image src="http://d.pr/i/1jSHZ.png" title="fig:" width="100%" />
           
-          <Slide  id="section-103">
-          
-          <Heading size={2} id="what-about-getting-this-from-the-web">What about getting this from the web?</Heading>
           
           </Slide>
-          <Slide  id="section-104">
+          <Slide>
           
-          Let's fake it for now...
+          Generated files
+          
+          <Image src="http://d.pr/i/1g4fF.png" title="fig:" width="100%" />
+          
           
           </Slide>
-          <Slide  id="section-105">
+          <Slide>
+          
+          <Heading size={2} id="running">Running</Heading>
+          
+          <CodePane lang="bash" source={require('raw!../code/code_12.bash')} />
           
           </Slide>
-          <Slide  id="section-106">
+          <Slide>
           
-          <CodePane lang="bash" textSize={22}>npm install --save rxjs@5.0.0-beta.6</CodePane>
+          <Image src="http://d.pr/i/1iHtH.png" title="fig:" width="100%" />
+          
           
           </Slide>
-          <Slide  id="section-107">
+          <Slide>
           
-          <Heading size={2} id="lets-talk-about-subject">Let's talk about Subject</Heading>
-          
-          </Slide>
-          <Slide  id="section-108">
-          
-          A <Code textSize={22}>Subject</Code> is both an observer and observable
+          <Link href="http://localhost:3000"><Image src="http://d.pr/i/1cHlv.png" title="" width="100%" />
+          </Link>
           
           </Slide>
-          <Slide  id="section-109">
+          <Slide>
           
-          A <Code>BehaviorSubject</Code> can subscribe to receive the last and all values
+          <Heading size={2} id="complexity-at-the-price-of-simplicity">Complexity at the price of simplicity</Heading>
           
-          </Slide>
-          <Slide  id="section-110">
-          
-          A <Code textSize={22}>Subject</Code> can be subscribed
-          
-          </Slide>
-          <Slide  id="section-111">
-          
-          Let's move the counter to support <Code>rxjs</Code>
-          
-          </Slide>
-          
-          
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/rxjs.ts')}
-               ranges={[
-                      { loc: [1, 3] },
-                      { loc: [9, 11] },
-                    ]} />
-          
-          <Slide  id="how-do-we-use-it"><Heading size={1} id="how-do-we-use-it">How do we use it?</Heading>
+          <List>
+          <ListItem>Hot reloading</ListItem>
+          <ListItem>Babel out of the box</ListItem>
+          <ListItem>Routing (we're not using this today)</ListItem>
+          <ListItem>PostCSS</ListItem>
+          <ListItem>Redux (we're not using this today)</ListItem>
+          <ListItem>CSS modules</ListItem>
+          </List>
           
           </Slide>
+          <Slide>
+          
+          <Heading size={2} id="let-us-simplify-reduce">Let us simplify &amp; reduce</Heading>
+          
+          Open <Code>src/app.js</Code> and replace <em>all</em> contents with:
+          
+          <CodePane lang="bash" source={require('raw!../code/code_13.bash')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="whats-all-this-mean">What's all this mean?</Heading>
+          
+          We are: * importing dependencies * including some styling
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="virtual-dom">Virtual DOM</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          The <em>idea</em>: interacting with the DOM is <em>slow</em> as my mom trying to hook up her Netflix account on her iPad (no offense, mom -- hey, you have an iPad at least!).
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="https://www.eboxlab.com/wp-content/uploads/2014/10/grandma_PC.jpg" title="fig:" width="100%" />
           
           
-          <CodeSlide
-           lang="javascript"
-           transition={[]}
-           textSize={22}
-           code={require('../code/rxjs.ts')}
-               ranges={[
-                      { loc: [32, 33] },
-                      { loc: [39, 41] },
-                      { loc: [49, 50] },
-                    ]} />
+          </Slide>
+          <Slide>
           
-          <Slide  id="section-114">
+          <Heading size={2} id="virtual-dom-1">Virtual DOM</Heading>
           
-          <Heading size={2} id="phew-that-was-a-lot">Phew, that was a LOT</Heading>
+          Rather than updating the DOM on every change, React builds a <em>virtual</em> model of the DOM in memory and flushes (or changes the DOM) at the end when everything is figured out already.
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="virtual-dom-2">Virtual DOM</Heading>
+          
+          Rather than create <em>actual</em> DOM instances, we'll ask React to create <em>virtual</em> instances instead.
+          
+          </Slide>
+          <Slide>
+          
+          Building a React app basically means we're responsible for building these virtual DOM instances.
+          
+          </Slide>
+          <Slide>
+          
+          There are multiple ways to do this. The most basic:
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_14.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Our <Code>App</Code> instance is a custom React object with a single function: the <Code>render</Code> function. The <Code>render</Code> function tells React what to render on the page. Except...
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1lHlA.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          We haven't asked React to render anything yet, we've just created the virtual DOM class. We need to ask React to render our <Code>App</Code> into the dom.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_15.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/6fPg.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="jsx">JSX</Heading>
+          
+          Although it <em>looks</em> like HTML, it's using a language called JavaScript Syntax eXtension, or JSX for short, which compiles to JavaScript
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="jsx-1">JSX</Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_16.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="jsx-2">JSX</Heading>
+          
+          Because the <Code>render</Code> function returns JSX, which is JavaScript, we have to handle dynamic data differently than if it were just HTML, but we can show data variables!
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_17.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/16iE1.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="static-data-is-not-very-interesting">Static data is <em>not</em> very interesting</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="let-us-make-this-dynamic">Let us make this dynamic</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="we-pass-properties-to-react-components">We pass <em>properties</em> to React components</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_18.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="we-can-access-this-data-through-the-this.props-accessor-on-the-component">We can access this data through the <Code>this.props</Code> accessor on the component</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_19.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/w2vZ.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="we-can-pass-all-sorts-of-props">We can pass all sorts of <Code>props</Code></Heading>
+          
+          <List>
+          <ListItem>constants</ListItem>
+          <ListItem>variables</ListItem>
+          <ListItem>functions</ListItem>
+          <ListItem>objects</ListItem>
+          <ListItem>arrays</ListItem>
+          <ListItem>components</ListItem>
+          <ListItem>booleans</ListItem>
+          <ListItem>and more...</ListItem>
+          </List>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_20.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="using-plain-javascript-we-can-map-over-the-list-and-display-them">Using plain JavaScript, we can <em>map</em> over the list and display them</Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_21.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/10kQg.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="whats-with-that-error">What's with that error?</Heading>
+          
+          <em>We will come back to it</em>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="composability">Composability</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="just-like-html">Just like HTML</Heading>
+          
+          <CodePane lang="markup" source={require('raw!../code/code_22.markup')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="the-react-virtual-dom-is-hierarchical">The React virtual DOM is hierarchical</Heading>
+          
+          <CodePane lang="markup" source={require('raw!../code/code_23.markup')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="these-are-considered-children">These are considered <Code>children</Code></Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="let-us-make-a-name-component">Let us make a <Code>&lt;Name /&gt;</Code> component</Heading>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_24.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Using our <Code>&lt;Name /&gt;</Code> stateless component, we can substitute our display with the component.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_25.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="virtual-dom-tree">Virtual DOM tree</Heading>
+          
+          <List>
+          <ListItem><Code>&lt;App /&gt;</Code></ListItem>
+          <ListItem><Code>&lt;Name /&gt;</Code></ListItem>
+          <ListItem><Code>&lt;Name /&gt;</Code></ListItem>
+          <ListItem><Code>&lt;Name /&gt;</Code></ListItem>
+          </List>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="let-us-get-rid-of-that-error-now">Let us get rid of that error now</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          React <em>remembers</em> the what each DOM element has what data, so it requires us to tell how to keep DOM elements unique. We do this with a special prop called <Code>key</Code>:
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_26.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Let us <em>change</em> the <Code>names</Code> variable at watch how React keeps track
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="interactivity">Interactivity</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          We can listen for events on the component using <Code>props</Code>. Let us add an add button here:
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_27.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/dviw.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          In React, we <em>cannot</em> manipulate <Code>props</Code> in a component.
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="one-way-data-flow">One-way data flow</Heading>
+          
+          <Code>&lt;App&gt;</Code> -&gt; <Code>&lt;Name /&gt;</Code>
+          
+          </Slide>
+          <Slide>
+          
+          Believe it or not, this makes everything much easier, as we'll see, but... to manipulate our list of items, we have to handle data in a different way.
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="stateful-components">Stateful components</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="state-is-kind-of-a-big-deal-with-react">State is kind of a big deal with React</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          We need to tell React if we want to create a stateful component using <Code>getInitialState()</Code>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_28.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Now, instead of getting the names from the <Code>props</Code>, we can get them from the <Code>state</Code>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_29.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1eIqw.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          State <em>can</em> be manipulated at the component level, so in our <Code>onAdd()</Code> button click, we can change the <Code>state</Code> and the component automatically refreshes and updates/adds a component as necessary.
+          
+          </Slide>
+          <Slide>
+          
+          We can manipulate state using <Code>setState()</Code> on a component.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_30.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/17UO9.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          What happens if you try to add two names?
+          
+          </Slide>
+          <Slide>
+          
+          Let us create an entirely new name
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="shell" source={require('raw!../code/code_31.shell')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1gEU3.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_32.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/16Jf2.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="not-very-interesting-ari...">Not very interesting, Ari...</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="let-us-do-a-news-ticker-with-twitter">Let us do a news ticker with twitter</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          First, let's get some keys for <Link href="http://dev.twitter.com">Twitter</Link>
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/185J2.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          And grab our keys
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/128lV.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          Using our <em>build chain</em>, let's store our keys in a non-git controlled file
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="shell" source={require('raw!../code/code_33.shell')} />
+          
+          </Slide>
+          <Slide>
+          
+          Now, we can refer to these keys using the uppercased version surrounded by <Code>__</Code>, i.e.:
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_34.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          OAuth can be a bit ugly, let's make it easier.
+          
+          I've set up a proxy service using hellojs, so use my <Code>TWITTER_KEY</Code> from above as your own.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="shell" source={require('raw!../code/code_35.shell')} />
+          
+          </Slide>
+          <Slide>
+          
+          We need to initialize hello to work with twitter. We only need/want to do this once when the component mounts.
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="lifecycle-callbacks">Lifecycle callbacks</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          Every basic React component (except functional stateless components) fires lifecycle events at different stages.
+          
+          </Slide>
+          <Slide>
+          
+          <List>
+          <ListItem>componentWillMount - the component is getting ready to mount</ListItem>
+          <ListItem>componentDidMount - the component has mounted (DOM elements exist on page)</ListItem>
+          <ListItem>componentWillUpdate - before the component is updated, but is about to be</ListItem>
+          <ListItem>componentDidUpdate - after the component has updated (and DOM elements update)</ListItem>
+          <ListItem>componentWillReceiveProps - the component will receive some new props</ListItem>
+          </List>
+          
+          </Slide>
+          <Slide>
+          
+          Let us initialize <Code>hello</Code> right when the <Code>&lt;App /&gt;</Code> component has been mounted.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_36.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          With hello initialized we can ask twitter to authorize our application to make requests on our behalf.
+          
+          </Slide>
+          <Slide>
+          
+          Let us create an authorize button for our user to press to get an oauth token from Twitter.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_37.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          We only want to show our <Code>&lt;AuthorizeButton /&gt;</Code> when we're not logged in, for that we'll need to keep track of some <Code>state</Code> in our <Code>&lt;App /&gt;</Code> component.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_38.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Now we can use our <Code>loggedIn</Code> in <Code>state</Code> to determine if we want to show or hide our authorize a button.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_39.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Now, depending on the <Code>state</Code> of <Code>&lt;App /&gt;</Code>, the authorize button will show or be hidden.
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/194MU.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          We want <em>something</em> to happen with our <Code>&lt;AuthorizeButton /&gt;</Code> when it's clicked. Let us create an action callback handler to be run on the button when it's clicked.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_40.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Since the <Code>&lt;App /&gt;</Code> knows about <Code>hello</Code>, but the <Code>&lt;AuthorizeButton /&gt;</Code> instance does not, we'll either have to pass hello in as a prop <em>or</em> a function to be called.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_41.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          hello has a <Code>login()</Code> method we can call when it's ready to call authorization.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_42.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="exercise-store-the-auth-token">Exercise: store the auth token</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_43.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="making-a-call-to-twitter">Making a call to twitter</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          We can use the <Code>hello()</Code> object to make an API call for us using the token
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_44.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          More apis can be found at:
+          
+          <Image src="http://d.pr/i/11Suo.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          With a set of statuses, let's list them.
+          
+          </Slide>
+          <Slide>
+          
+          Let us list these elements in our <Code>&lt;App /&gt;</Code>:
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_45.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="exercise">Exercise:</Heading>
+          
+          Create a news list component to show the new statuses (<Code>&lt;NewsList /&gt;</Code>) <em>and</em> use another component to render the news item (<Code>&lt;Item /&gt;</Code>).
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1jH2o.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_46.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_47.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          We need to go fetch some things from Twitter. Let us get the latest samples with our helper method <em>after</em> we have a token.
+          
+          </Slide>
+          <Slide>
+          
+          We can run a function <em>after</em> the state has been updated as a second argument to the <Code>setState()</Code> function:
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_48.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="what-happens-if-we-refresh">What happens if we refresh?</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/q4PD.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          Let us fix this. <Code>hello</Code> stores the auth response in localStorage. We can ask for the credentials when the component mounts and use that to call twitter
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="question-what-method-can-we-call-to-run-when-the-component-mounts">Question: what method can we call to run when the component mounts?</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_49.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          But we don't have a <Code>twitterAuth</Code> when the component mounts, right?
+          
+          </Slide>
+          <Slide>
+          
+          <Code>hello</Code> allows us to make a fetch to get these credentials:
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_50.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="ugly----so-ugly">Ugly -- so ugly</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          Let us add some style
+          
+          </Slide>
+          <Slide>
+          
+          <Heading size={2} id="css-modules">CSS Modules</Heading>
+          
+          </Slide>
+          <Slide>
+          
+          CSS is gross, does anyone like css?
+          
+          </Slide>
+          <Slide>
+          
+          CSS modules give us ways to break up CSS to be specific to a particular module.
+          
+          </Slide>
+          <Slide>
+          
+          Let us create a CSS module for the <Code>app.js</Code> file in a file called <Code>app.module.css</Code>
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="css" source={require('raw!../code/container.css')} />
+          
+          </Slide>
+          <Slide>
+          
+          We need to import these styles into our <Code>app.js</Code>.
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_51.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Let us use our <Code>container</Code> style in our app.
+          
+          </Slide>
+          <Slide>
+          
+          CSS modules turn our CSS file into:
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_52.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          Applying this to our <Code>&lt;App /&gt;</Code> container is easy:
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_53.javascript')} />
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/1hi8L.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          Exercise: Make this look pretty
+          
+          </Slide>
+          <Slide>
+          
+          <Image src="http://d.pr/i/14ECV.png" title="fig:" width="100%" />
+          
+          
+          </Slide>
+          <Slide>
+          
+          Some helpers
+          
+          </Slide>
+          <Slide>
+          
+          PostCSS: css preprocessor gives us some sugar around css
+          
+          </Slide>
+          <Slide>
+          
+          For instance, to style a list item:
+          
+          <CodePane lang="css" source={require('raw!../code/code_54.css')} />
+          
+          </Slide>
+          <Slide>
+          
+          We can create CSS variables too!
+          
+          <CodePane lang="css" source={require('raw!../code/code_55.css')} />
+          
+          </Slide>
+          <Slide>
+          
+          Use <Code>classnames</Code> to combine and set conditional classnames
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane lang="shell" source={require('raw!../code/code_56.shell')} />
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane source={require('raw!../code/classnames.js')} />
+          
+          </Slide>
+          <Slide>
+          
+          <CodePane source={require('raw!../code/clock.html')} />
           
           </Slide>
           <Slide  id="thanks"><Heading size={1} id="thanks">Thanks!</Heading>
           
           </Slide>
-          <Slide  id="section-115">
+          <Slide>
           
           <Heading size={2} id="for-more-info">For more info:</Heading>
           

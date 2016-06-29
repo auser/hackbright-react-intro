@@ -1,16 +1,3 @@
--- This is a spectacle custom writer for pandoc.  It produces output
--- for use as a slide show.
---
--- http://github.com/formidablelabs/spectacle
---
--- Invoke with: pandoc -t spectacle.lua
---
--- Note:  you need not have lua installed on your system to use this
--- custom writer.  However, if you do have lua installed, you can
--- use it to test changes to the script.  'lua spectacle.lua' will
--- produce informative error messages if your code contains
--- syntax errors.
-
 local spectacle = {}
 local inSlide = false
 
@@ -45,6 +32,11 @@ local function escape(s, in_attribute)
                     return x
                   end
   end)
+end
+
+local function script_path()
+   local str = debug.getinfo(2, "S").source:sub(1)
+   return str:match("(.*/)")
 end
 
 local function contains(table, val)
@@ -99,6 +91,7 @@ end
 
 -- Table to store footnotes, so they can be included at the end.
 local notes = {}
+local codeBlocksCount = 0
 
 -- Blocksep is used to separate block elements.
 function spectacle.Blocksep(s)
@@ -257,8 +250,24 @@ function spectacle.BlockQuote(s)
   return "<BlockQuote>\n<Quote>" .. s .. "</Quote>\n</BlockQuote>"
 end
 
-function spectacle.HorizontalRule()
-  return "<hr/>"
+function spectacle.RawBlock(s)
+  return s
+end
+
+function spectacle.HorizontalRule(attr)
+  local ret = ""
+  if inSlide then
+    ret = ret .. "</Slide>\n"
+    inSlide = false
+  end
+
+  -- if attr["noSlide"] ~= nil then
+  -- else
+    ret = ret .. "<Slide>"
+    inSlide = true
+  -- end
+
+  return ret
 end
 
 function spectacle.CodeBlock(s, attr)
@@ -266,8 +275,27 @@ function spectacle.CodeBlock(s, attr)
     local png = pipe("base64", pipe("dot -Tpng", s))
     return '<img src="data:image/png;base64,' .. png .. '"/>'
   -- otherwise treat as code (one could pipe through a highlighter)
+elseif attr.source then
+    return "<CodePane" .. attributes(attr) .. "></CodePane>"
   else
-    return "<CodePane" .. attributes(attr) .. ">" .. escape(s) .. "</CodePane>"
+    local fn
+    if attr.name and attr.name ~= nil then
+      fn = attr.name
+    else
+      fn = "code_" .. codeBlocksCount .. "." .. attr.class
+      codeBlocksCount = codeBlocksCount + 1
+    end
+    local filename = "../code/" .. fn
+    local filepath = script_path() .. "../" .. filename
+    local f = assert(io.open(filepath, "w+"))
+    f:write(s);
+    f:close()
+    -- require("raw!../code/es6-classes.js")}
+    attr.lang = attr.class
+    attr.class = nil
+    attr.name = nil
+
+    return "<CodePane" .. attributes(attr) .. " source={require('raw!" .. filename .."')} />"
   end
 end
 
@@ -404,7 +432,9 @@ if module == nil then
       return function() return "" end
     end
   setmetatable(_G, meta)
-  for k,v in pairs(spectacle) do _G[k] = v end
+  for k,v in pairs(spectacle) do
+    _G[k] = v
+  end
 else
   -- if required as a module simply return the module table
   return spectacle
