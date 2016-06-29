@@ -1,0 +1,3 @@
+const messages = document.querySelector('.messages');
+const message1 = messages.querySelector('ul li')
+message1.innerHTML = 'Message 3'

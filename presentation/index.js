@@ -76,7 +76,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide  id="follow-along"><Heading size={1} id="follow-along">Follow along!</Heading>
           
-          <Link href="http://hackbright.surge.sh/">http://hackbright.surge.sh/</Link>
+          <Link href="http://hackbright-react.surge.sh/">http://hackbright-react.surge.sh/</Link>
           
           </Slide>
           <Slide>
@@ -86,7 +86,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide  id="section">
           
-          <Image src={images.ari}  title="fig:" width="100%" />
+          <Image src={images.ari}  title="fig:" width="50%" />
           
           
           </Slide>
@@ -165,6 +165,10 @@ export default class Presentation extends React.Component {
           
           <CodePane lang="javascript" source={require('raw!../code/code_1.javascript')} />
           
+          <CodePane lang="javascript" source={require('raw!../code/code_2.javascript')} />
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_3.javascript')} />
+          
           </Slide>
           <Slide>
           
@@ -178,7 +182,9 @@ export default class Presentation extends React.Component {
           
           The <em>context</em> is not set right. We need to <em>bind</em> the function to the context.
           
-          <CodePane lang="javascript" source={require('raw!../code/code_2.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_4.javascript')} />
+          
+          <CodePane lang="javascript" source={require('raw!../code/code_5.javascript')} />
           
           </Slide>
           <Slide>
@@ -191,7 +197,7 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="string-interpolation">String interpolation</Heading>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_3.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_6.javascript')} />
           
           </Slide>
           <Slide>
@@ -204,14 +210,14 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="variable-expansion">Variable expansion</Heading>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_4.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_7.javascript')} />
           
           </Slide>
           <Slide>
           
           <Heading size={2} id="objects">Objects</Heading>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_5.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_8.javascript')} />
           
           </Slide>
           <Slide>
@@ -228,7 +234,7 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="playing-with-the-dom">Playing with the DOM</Heading>
           
-          <CodePane lang="markup" source={require('raw!../code/code_6.markup')} />
+          <CodePane lang="markup" source={require('raw!../code/code_9.markup')} />
           
           </Slide>
           <Slide>
@@ -268,12 +274,12 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_7.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_10.shell')} />
           
           </Slide>
           <Slide>
           
-          <CodePane lang="html" source={require('raw!../code/code_8.html')} />
+          <CodePane lang="html" source={require('raw!../code/code_11.html')} />
           
           </Slide>
           <Slide>
@@ -344,12 +350,12 @@ export default class Presentation extends React.Component {
           
           Make sure you have <Code>npm</Code> installed
           
-          <CodePane lang="shell" source={require('raw!../code/code_9.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_12.shell')} />
           
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_10.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_13.shell')} />
           
           <Image src="http://d.pr/i/Fd9S.png" title="fig:" width="100%" />
           
@@ -362,7 +368,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_11.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_14.shell')} />
           
           <Image src="http://d.pr/i/1jSHZ.png" title="fig:" width="100%" />
           
@@ -380,7 +386,7 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="running">Running</Heading>
           
-          <CodePane lang="bash" source={require('raw!../code/code_12.bash')} />
+          <CodePane lang="bash" source={require('raw!../code/code_15.bash')} />
           
           </Slide>
           <Slide>
@@ -415,7 +421,7 @@ export default class Presentation extends React.Component {
           
           Open <Code>src/app.js</Code> and replace <em>all</em> contents with:
           
-          <CodePane lang="bash" source={require('raw!../code/code_13.bash')} />
+          <CodePane lang="bash" source={require('raw!../code/code_16.bash')} />
           
           </Slide>
           <Slide>
@@ -464,7 +470,7 @@ export default class Presentation extends React.Component {
           
           There are multiple ways to do this. The most basic:
           
-          <CodePane lang="javascript" source={require('raw!../code/code_14.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_17.javascript')} />
           
           </Slide>
           <Slide>
@@ -485,7 +491,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_15.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_18.javascript')} />
           
           </Slide>
           <Slide>
@@ -505,7 +511,7 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="jsx-1">JSX</Heading>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_16.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_19.javascript')} />
           
           </Slide>
           <Slide>
@@ -517,7 +523,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_17.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_20.javascript')} />
           
           </Slide>
           <Slide>
@@ -543,7 +549,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_18.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_21.javascript')} />
           
           </Slide>
           <Slide>
@@ -553,7 +559,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_19.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_22.javascript')} />
           
           </Slide>
           <Slide>
@@ -580,14 +586,14 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_20.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_23.javascript')} />
           
           </Slide>
           <Slide>
           
           <Heading size={2} id="using-plain-javascript-we-can-map-over-the-list-and-display-them">Using plain JavaScript, we can <em>map</em> over the list and display them</Heading>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_21.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_24.javascript')} />
           
           </Slide>
           <Slide>
@@ -612,14 +618,14 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="just-like-html">Just like HTML</Heading>
           
-          <CodePane lang="markup" source={require('raw!../code/code_22.markup')} />
+          <CodePane lang="markup" source={require('raw!../code/code_25.markup')} />
           
           </Slide>
           <Slide>
           
           <Heading size={2} id="the-react-virtual-dom-is-hierarchical">The React virtual DOM is hierarchical</Heading>
           
-          <CodePane lang="markup" source={require('raw!../code/code_23.markup')} />
+          <CodePane lang="markup" source={require('raw!../code/code_26.markup')} />
           
           </Slide>
           <Slide>
@@ -631,7 +637,7 @@ export default class Presentation extends React.Component {
           
           <Heading size={2} id="let-us-make-a-name-component">Let us make a <Code>&lt;Name /&gt;</Code> component</Heading>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_24.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_27.javascript')} />
           
           </Slide>
           <Slide>
@@ -641,7 +647,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_25.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_28.javascript')} />
           
           </Slide>
           <Slide>
@@ -668,7 +674,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_26.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_29.javascript')} />
           
           </Slide>
           <Slide>
@@ -688,7 +694,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_27.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_30.javascript')} />
           
           </Slide>
           <Slide>
@@ -731,7 +737,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_28.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_31.javascript')} />
           
           </Slide>
           <Slide>
@@ -741,7 +747,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_29.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_32.javascript')} />
           
           </Slide>
           <Slide>
@@ -762,7 +768,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_30.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_33.javascript')} />
           
           </Slide>
           <Slide>
@@ -783,7 +789,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_31.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_34.shell')} />
           
           </Slide>
           <Slide>
@@ -794,7 +800,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_32.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_35.javascript')} />
           
           </Slide>
           <Slide>
@@ -842,14 +848,14 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_33.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_36.shell')} />
           
           </Slide>
           <Slide>
           
           Now, we can refer to these keys using the uppercased version surrounded by <Code>__</Code>, i.e.:
           
-          <CodePane lang="javascript" source={require('raw!../code/code_34.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_37.javascript')} />
           
           </Slide>
           <Slide>
@@ -861,7 +867,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_35.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_38.shell')} />
           
           </Slide>
           <Slide>
@@ -897,7 +903,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_36.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_39.javascript')} />
           
           </Slide>
           <Slide>
@@ -912,7 +918,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_37.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_40.javascript')} />
           
           </Slide>
           <Slide>
@@ -922,7 +928,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_38.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_41.javascript')} />
           
           </Slide>
           <Slide>
@@ -932,7 +938,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_39.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_42.javascript')} />
           
           </Slide>
           <Slide>
@@ -953,7 +959,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_40.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_43.javascript')} />
           
           </Slide>
           <Slide>
@@ -963,7 +969,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_41.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_44.javascript')} />
           
           </Slide>
           <Slide>
@@ -973,7 +979,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_42.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_45.javascript')} />
           
           </Slide>
           <Slide>
@@ -983,7 +989,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_43.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_46.javascript')} />
           
           </Slide>
           <Slide>
@@ -998,7 +1004,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_44.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_47.javascript')} />
           
           </Slide>
           <Slide>
@@ -1021,7 +1027,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_45.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_48.javascript')} />
           
           </Slide>
           <Slide>
@@ -1039,12 +1045,12 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_46.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_49.javascript')} />
           
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_47.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_50.javascript')} />
           
           </Slide>
           <Slide>
@@ -1059,7 +1065,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_48.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_51.javascript')} />
           
           </Slide>
           <Slide>
@@ -1085,7 +1091,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_49.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_52.javascript')} />
           
           </Slide>
           <Slide>
@@ -1097,7 +1103,7 @@ export default class Presentation extends React.Component {
           
           <Code>hello</Code> allows us to make a fetch to get these credentials:
           
-          <CodePane lang="javascript" source={require('raw!../code/code_50.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_53.javascript')} />
           
           </Slide>
           <Slide>
@@ -1142,7 +1148,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="javascript" source={require('raw!../code/code_51.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_54.javascript')} />
           
           </Slide>
           <Slide>
@@ -1154,14 +1160,14 @@ export default class Presentation extends React.Component {
           
           CSS modules turn our CSS file into:
           
-          <CodePane lang="javascript" source={require('raw!../code/code_52.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_55.javascript')} />
           
           </Slide>
           <Slide>
           
           Applying this to our <Code>&lt;App /&gt;</Code> container is easy:
           
-          <CodePane lang="javascript" source={require('raw!../code/code_53.javascript')} />
+          <CodePane lang="javascript" source={require('raw!../code/code_56.javascript')} />
           
           </Slide>
           <Slide>
@@ -1195,14 +1201,14 @@ export default class Presentation extends React.Component {
           
           For instance, to style a list item:
           
-          <CodePane lang="css" source={require('raw!../code/code_54.css')} />
+          <CodePane lang="css" source={require('raw!../code/code_57.css')} />
           
           </Slide>
           <Slide>
           
           We can create CSS variables too!
           
-          <CodePane lang="css" source={require('raw!../code/code_55.css')} />
+          <CodePane lang="css" source={require('raw!../code/code_58.css')} />
           
           </Slide>
           <Slide>
@@ -1212,7 +1218,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide>
           
-          <CodePane lang="shell" source={require('raw!../code/code_56.shell')} />
+          <CodePane lang="shell" source={require('raw!../code/code_59.shell')} />
           
           </Slide>
           <Slide>

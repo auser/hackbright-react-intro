@@ -1,0 +1,2 @@
+mkdir HackBrightApp && cd $_
+yo react-gen

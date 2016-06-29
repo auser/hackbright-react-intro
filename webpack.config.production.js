@@ -67,6 +67,7 @@ module.exports = {
       loader: "babel-loader"
     }, {
       test: /\.css$/,
+      exclude: /code/,
       loader: "style-loader!css-loader"
     }, {
       test: /\.(png|jpg|gif)$/,

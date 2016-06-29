@@ -1,0 +1,1 @@
+User.print(); // What do you think?

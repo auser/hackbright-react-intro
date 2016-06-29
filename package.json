@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "build": "NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
+    "deploy": "npm run clean && npm run templates && npm run pandoc && npm run build && surge -p .",
     "templates:html": "./node_modules/.bin/render presentation/templates/html.swig --context package.json > index.html",
     "templates:js": "./node_modules/.bin/render presentation/templates/js.swig.js --engine swig --context package.json > presentation/template.js",
     "templates": "concurrently 'npm run templates:html' 'npm run templates:js'",

@@ -1,0 +1,6 @@
+:root {
+  --item-padding: 5px;
+}
+li {
+  padding: var(--item-padding);
+}
